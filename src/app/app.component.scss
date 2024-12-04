@@ -1,7 +1,7 @@
 @import url('../assets/styles/_variables.scss');
 
 .drs-main{
-  background: var(--drs-primary);
+  background: var(--drs-bg-color);
   margin: 0;
   padding: 0;
   display: flex;
@@ -9,7 +9,17 @@
   justify-content: space-between;
 }
 
-.drs-content{
+.drs-container{
   display: flex;
   min-height: 100vh;
+  padding-top: 19vh;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  &--section{
+    width: 1096px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 }
