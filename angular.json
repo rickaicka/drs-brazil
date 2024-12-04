@@ -12,7 +12,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "drs",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -100,6 +100,10 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {}
         }
       }
     }

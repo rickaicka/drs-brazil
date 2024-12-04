@@ -1,0 +1,13 @@
+.header-container{
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  padding: 36px 0;
+  &-menu{
+    width: 1096px;
+    background: white;
+    height: 74px;
+    display: flex;
+    justify-content: flex-start;
+  }
+}

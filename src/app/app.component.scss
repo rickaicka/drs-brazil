@@ -1,0 +1,15 @@
+@import url('../assets/styles/_variables.scss');
+
+.drs-main{
+  background: var(--drs-primary);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.drs-content{
+  display: flex;
+  min-height: 100vh;
+}

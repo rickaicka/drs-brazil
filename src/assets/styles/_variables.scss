@@ -1,0 +1,53 @@
+@use "sass:meta";
+:host{
+  --drs-bg-color: rgba(60, 78, 165, 0.7);
+  --drs-primary: rgba(60, 78, 165, 1);
+  --drs-secondary: rgba(236, 187, 36, 1);
+  --drs-white: rgba(249, 249, 249, 1);
+  --drs-whatsapp: rgba(37, 211, 102, 1);
+
+  --drs-gradient-first: rgba(241, 241, 241, 0.83);
+  --drs-gradient-second: rgba(212, 212, 212, 0.77);
+  --drs-gradient-third: rgba(139, 139, 139, 0.6);
+  --drs-gradient-footer-first: rgba(60, 78, 165, 0.7);
+  --drs-gradient-footer-second: rgba(23, 30, 63, 1);
+}
+
+@mixin font-sizes($args...) {
+  @each $name, $size in meta.keywords($args) {
+    .drs-bitter-size-#{$name} {
+      font-family: "Bitter", serif;
+      font-optical-sizing: auto;
+      font-weight: 700;
+    }
+    .drs-raleway-size-#{$name} {
+      font-family: "Raleway", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+    }
+  }
+}
+
+@include font-sizes(
+  $xxs: 12px,
+  $xs: 16px,
+  $ssm: 18px,
+  $sm: 20px,
+  $md: 24px,
+  $lg: 32px,
+);
+
+%white-gradient{
+  background: linear-gradient(90deg, var(--drs-gradient-first), var(--drs-gradient-second), var(--drs-gradient-third));
+}
+%blue-gradient{
+  background: linear-gradient(180deg, var(--drs-gradient-footer-primary), var(--drs-gradient-footer-second));
+}
+
+.drs-gradient{
+  @extend %white-gradient;
+};
+
+.drs-gradient-footer{
+  @extend %blue-gradient;
+};
