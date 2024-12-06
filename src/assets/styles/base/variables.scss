@@ -13,29 +13,29 @@
   --drs-gradient-footer-second: rgba(23, 30, 63, 1);
 }
 
-@mixin font-sizes($args...) {
-  @each $name, $size in meta.keywords($args) {
-    .drs-bitter-size-#{$name} {
-      font-family: "Bitter", serif;
-      font-optical-sizing: auto;
-      font-weight: 700;
-    }
-    .drs-raleway-size-#{$name} {
-      font-family: "Raleway", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 400;
-    }
+$sizes:(
+  'sm':12,
+  'm':16,
+  'r':18,
+  'x':20,
+  'xm':24,
+  'xxm':32,
+);
+
+@each $name, $color in $sizes{
+  .raleway-#{$name}{
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: $color+px;
+  }
+  .bitter-#{$name}{
+    font-family: "Bitter", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: $color+px;
   }
 }
-
-@include font-sizes(
-  $xxs: 12px,
-  $xs: 16px,
-  $ssm: 18px,
-  $sm: 20px,
-  $md: 24px,
-  $lg: 32px,
-);
 
 %white-gradient{
   background: linear-gradient(90deg, var(--drs-gradient-first), var(--drs-gradient-second), var(--drs-gradient-third));

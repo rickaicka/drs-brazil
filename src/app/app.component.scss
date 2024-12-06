@@ -1,4 +1,4 @@
-@import url('../assets/styles/_variables.scss');
+@import 'variables';
 
 .drs-main{
   background: var(--drs-bg-color);
@@ -12,7 +12,7 @@
 .drs-container{
   display: flex;
   min-height: 100vh;
-  padding-top: 19vh;
+  padding-top: 175px;
   width: 100%;
   justify-content: center;
   align-items: flex-start;
